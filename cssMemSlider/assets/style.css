@@ -148,3 +148,52 @@ input[type="radio"]:checked + .label + .image {
     transform: translateX(0px);
   }
 }
+@media (max-width: 767px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+  .btn_container {
+    width: 100vw;
+    height: 100vh;
+    align-items: start;
+  }
+  .btn {
+    width: 100vw;
+    margin: 0;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .image {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    margin-bottom: 24px;
+    background-position: 76% 50%;
+  }
+  .description {
+    font-size: 32px;
+    transform: translateX(-415px);
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .label1 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .label2 {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .label3 {
+    grid-row-start: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  .label4 {
+    grid-row-start: 2;
+    grid-column-start: 5;
+    grid-column-end: 6;
+  }
+}
