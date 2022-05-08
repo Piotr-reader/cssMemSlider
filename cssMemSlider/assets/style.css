@@ -45,6 +45,7 @@ input[type="radio"] {
   grid-column-start: 1;
   grid-column-end: 8;
   transition: all 0.6s ease;
+  transform: translateX(-345px);
 }
 .image {
   position: inherit;
@@ -57,6 +58,7 @@ input[type="radio"] {
   grid-column-start: 1;
   grid-column-end: 16;
   transition: all 0.6s ease;
+  transform: translateX(752px);
 }
 .img1 {
   background-image: url(./superman.jpg);
@@ -119,4 +121,30 @@ input[type="radio"]:checked + .label:hover .circle {
   border: 3px solid white;
   background-color: rgb(78, 77, 77);
   transition: all 0.6s ease;
+}
+input[type="radio"]:checked + .label + .image + .description {
+  animation-name: move_right;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+input[type="radio"]:checked + .label + .image {
+  animation-name: move_left;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes move_left {
+  from {
+    transform: translateX(752px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes move_right {
+  from {
+    transform: translateX(-345px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
